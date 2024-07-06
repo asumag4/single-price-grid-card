@@ -1,0 +1,154 @@
+/*
+These rules throughout the HTML document are important for boxes to fit perfectly within the cards
+*/
+html {
+    box-sizing: border-box;
+    font-family: "Karla";
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  body {
+    padding: 20px; 
+  }
+  
+  h2, h4, p {
+    margin: 0; 
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  #card { 
+    box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.35);
+    border-radius: 5px; 
+    overflow: hidden;
+  /*   width: 600px; 
+    height: 400px;  */
+    
+  }
+  
+  /* 
+  Notes:
+  - border-radius: Horizontal offset, Vertical offset, Blur radius, Spread radius
+  */
+  
+  #title {
+    width: 100%; 
+    height: 40%;
+    padding: 25px; 
+  }
+  
+  /*
+  It's better to use padding because then the container stays in the same location, whereas margins will shift the position of the container
+  */
+  
+  #bottomSection {
+    display: flex;
+    width: 100%; 
+    height: 60%;
+    color: white;
+  }
+  
+  #subscription {
+  /*   display: inline-block; */
+    flex: 1; 
+    background-color: hsl(179, 62%, 43%);
+    padding: 25px;
+  }
+  
+  /* 
+  Can also use display: inline-block for each sub-container of the bottom section. Acheives the same goal of putting both containers side-by-side
+  */
+  
+  #whyUs {
+  /*   display: inline-block; */
+    flex: 1;
+    padding: 25px;
+    background-color: hsl(218, 22%, 67%);
+  }
+  
+  #title h2 {
+    color: hsl(218, 22%, 67%);
+    margin-bottom: 20px; 
+  }
+  
+  #title h3 {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 10px; 
+  }
+  
+  #title p {
+    color: hsl(218, 22%, 67%);
+  }
+  
+  #bottomSection subscription { 
+    display: flex;
+  }
+  
+  button {
+    color: white; 
+    background-color: hsl(71, 73%, 54%);
+    border: none; 
+    padding: 10px; 
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.35);
+  }
+  
+  button:hover {
+    cursor: pointer; 
+    background-color: #A9C42D;
+    transform: scale(1.02);
+  }
+  
+  #price {
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  
+  #subscription h3 {
+    margin-bottom: 25px;
+  }
+  
+  #subscription p {
+    font-size: 0.8rem; 
+    margin-bottom: 20px;
+  }
+  
+  #priceContainer {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  #priceFrequency {
+    position: relative;
+    top: 8px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-left: 5px;
+  }
+  
+  ul{
+    padding: 0;
+    list-style: none;
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 650px) {
+    #subscription, #whyUs {
+      width: 100%;
+      height: auto;
+    }
+    
+    #bottomSection {
+      flex-direction: column;  
+    }
+    
+    #card {
+      height: auto;
+      width: 100%;
+    }
+  }
